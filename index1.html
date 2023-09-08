@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>オープニング</title>
+    <link rel="stylesheet" href="style1.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="main">
+        <div class="loader">
+          <span></span>
+          <h2>WELCOM to <br>Yamashita Isao <br>Portfolio</h2>
+        </div>
+
+        <div class="nav">
+            <div class="nav-links">
+              <ul>
+                <li><a href="index-career.html">Career</a></li>
+                <li><a href="index-learning.html">Learning</a></li>
+                <li><a href="index-future.html">Future</a></li>
+              </ul>
+            </div>
+            <video src="./images/movie.mp4" autoplay muted loop></video>
+
+            <div class="social">
+              <ul>
+                <li>
+                  <a href=""><img src="./images/twitter.png" alt="" /></a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href=""><img src="./images/facebook.png" alt="" /></a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href=""><img src="./images/instagram.png" alt="" /></a>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.onload = function () {
+        setTimeout(() => {
+          const loader = document.querySelector(".loader");
+          loader.classList.add("loaded");
+
+          const nav = document.querySelector(".nav");
+          nav.style.visibility = "visible";
+        }, 5000);
+      };
+    </script>
+  </body>
+</html>

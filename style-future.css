@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: #1d1c1c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: white;
+  font-size: 1.5rem;
+  transition: all 3s;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+  z-index: 1;
+  animation: slideright 5S ease 1;
+}
+
+@keyframes slideright {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.nav-links ul {
+  list-style: none;
+}
+
+.nav-links ul li {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+}
+
+
+.nav-links ul li a {
+  font-size: 1.2rem;
+  color: #473f3f;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+
+.nav-links li a:hover {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: rgb(224, 103, 66);
+}
+
+.container {
+  position: relative;
+  background-color: rgb(224, 103, 66);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.future-comment{
+  position: absolute;
+  text-align: center;
+  top: 11vh;
+  left: 51%;
+}
+
+.future-comment h3{
+  color: #3b3535;
+  font-weight: 110;
+  animation: slidein01 5s 1;
+}
+
+@keyframes slidein01{
+  0%{
+    opacity: 0;
+    transform: translateX(1000px);
+  }70%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 670px) {
+
+  .nav-links{
+    text-align: center;
+    }
+    
+  .container {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+  }
+    
+  .future-comment{
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    left: 15%;
+    font-size: 20px;
+  }
+  
+  }

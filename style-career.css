@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    width: 100%;
+    height: 100vh;
+    background: #1d1c1c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .nav {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    font-size: 1.5rem;
+    transition: all 3s;
+    position: fixed;
+    /* transition-delay: 3s; */
+  }
+
+  .nav-links{
+    flex: 1;
+    text-align: right;
+    z-index: 1;
+    animation: slideright 5S ease 1;
+  }
+
+  @keyframes slideright {
+    0% {
+      transform: translateX(-100px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .nav-links ul {
+    list-style: none;
+  }
+
+  .nav-links ul li {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+  }
+
+
+  .nav-links ul li a {
+    font-size: 1.2rem;
+    color: #473f3f;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+
+
+  .nav-links  li a:hover{
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: rgb(19, 170, 216);
+  }
+
+.container {
+  position: relative;
+  background-color: rgb(19, 170, 216);
+  width: 100%;
+  height: 100vh;
+}
+
+.viewtop .view1 {
+    animation-name: animation1;
+    position: absolute;
+    width: 40%;
+    height: 50vh;
+    object-fit: initial;
+    opacity: 0;
+    animation: change-img-anim 30s infinite;
+}
+
+.viewtop .view1:nth-child(1){
+    animation: change-img-anim first 30s infinite;
+    animation-delay: 0s;
+}
+
+.viewtop .view1:nth-child(2) {
+    animation-delay: 10s;
+}
+
+.viewtop .view1:nth-child(3) {
+    animation-delay: 20s;
+}
+
+.viewbottomleft .view2 {
+  animation-name: animation2;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 20%;
+  height: 50vh;
+  object-fit: initial;
+  opacity: 0;
+  animation: change-img-anim 30s infinite;
+}
+
+.viewbottomleft .view2:nth-child(1){
+    animation: change-img-anim first 30s infinite;
+    animation-delay: 2s;
+}
+
+.viewbottomleft .view2:nth-child(2) {
+    animation-delay: 12s;
+}
+
+.viewbottomleft .view2:nth-child(3) {
+    animation-delay: 22s;
+}
+
+.viewbottemright .view3 {
+  animation-name: animation3;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  width: 20%;
+  height: 50vh;
+  object-fit: initial;
+  opacity: 0;
+  animation: change-img-anim 30s infinite;
+}
+
+.viewbottemright .view3:nth-child(1){
+  animation: change-img-anim first 30s infinite;
+  animation-delay: 4s;
+}
+
+.viewbottemright .view3:nth-child(2) {
+  animation-delay: 14s;
+}
+
+.viewbottemright .view3:nth-child(3) {
+  animation-delay: 24s;
+}
+
+  @keyframes change-img-anim-first {
+    0%{ opacity: 0;}
+    30%{ opacity: 1;}
+    36%{ opacity: 1;}
+    45%{ opacity: 0;}
+    100%{ opacity: 0;}
+  }
+
+  @keyframes change-img-anim{
+    0%{ opacity: 0;}
+    30%{ opacity: 1;}
+    36%{ opacity: 1;}
+    45%{ opacity: 0;}
+    100%{ opacity: 0;}
+  }
+
+.career-comment{
+  position: absolute;
+  top: 30vh;
+  left: 40%;
+}
+
+.career-comment h3{
+  text-align: center;
+  columns: #3b3535;
+  font-weight: 110;
+  animation: slidein01 5s 1;
+}
+
+.career-subcomment{
+  border: 10px ridge #1887c7;
+  width: 70%;
+  margin: 35px 100px;
+  animation: slidein02 7s 1; 
+}
+
+.career-comment p{
+  font-size: 15px;
+  padding:30px 80px;
+}
+
+@keyframes slidein01{
+  0%{
+    opacity: 0;
+    transform: translateX(1000px);
+  }60%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slidein02{
+  0%{
+    opacity: 0;
+  }10%{
+    opacity: 0;
+    transform: translateY(1000px);
+  }70%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 670px) {
+
+.nav-links{
+    text-align: center;
+  }
+
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+
+.viewtop .view1{
+  max-width: 100%;
+} 
+
+.viewbottomleft .view2 {
+  max-width: 100%;
+}
+
+.nav.career-comment{
+  position: absolute;
+  width: 50%;
+}
+
+.career-subcomment{
+  width: 70%;
+  margin: 10px 50px 10px 50px;
+}
+
+.career-comment p{
+  font-size: 15px;
+  padding:15px 35px;
+}
+
+}
+
+

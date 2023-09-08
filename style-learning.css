@@ -1,0 +1,463 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  /* height: 100%; */
+  background: #1d1c1c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: white;
+  font-size: 1.5rem;
+  transition: all 3s;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+  z-index: 1;
+  animation: slideright 5S ease 1;
+}
+
+@keyframes slideright {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.nav-links ul {
+  list-style: none;
+}
+
+.nav-links ul li {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+}
+
+
+.nav-links ul li a {
+  font-size: 1.2rem;
+  color: #473f3f;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+
+.nav-links li a:hover {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: rgb(19, 216, 95);
+}
+
+.container {
+  position: relative;
+  background-color: rgb(19, 216, 95);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.learning-comment{
+  position: absolute;
+  text-align: center;
+  top: 11vh;
+  left: 51%;
+}
+
+.learning-comment h3{
+  color: #3b3535;
+  font-weight: 110;
+  animation: slidein01 5s 1;
+}
+
+@keyframes slidein01{
+  0%{
+    opacity: 0;
+    transform: translateX(1000px);
+  }70%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.container .icon-top{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 25vh;
+  left: 55px;
+}
+
+.container .icon-bottom{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50vh;
+  left: 55px;
+}
+
+.icon-top01:hover .javacomment {
+  display: inline;
+}
+
+.icon-top02:hover .pythoncomment {
+  display: inline;
+}
+
+.icon-top03:hover .sqlcomment {
+  display: inline;
+}
+
+.icon-bottom01:hover .htmlcomment {
+  display: inline;
+}
+
+.icon-bottom02:hover .csscomment {
+  display: inline;
+}
+
+.icon-bottom03:hover .javascriptcomment {
+  display: inline;
+}
+
+.icon-top01 li {
+  list-style: none;
+}
+
+.icon-top02 li {
+  list-style: none;
+}
+
+.icon-top03 li {
+  list-style: none;
+}
+
+.icon-bottom01 li {
+  list-style: none;
+}
+
+.icon-bottom02 li {
+  list-style: none;
+}
+
+.icon-bottom03 li {
+  list-style: none;
+}
+
+.icon-top01 li a {
+  display: inline-block;
+  margin: 0px 20px 0px 20px;
+}
+
+.icon-top02 li a {
+  display: inline-block;
+  margin: 0px 20px 0px 20px;
+}
+
+.icon-top03 li a {
+  display: inline-block;
+  margin: 0px 20px 0px 20px;
+}
+
+.icon-bottom01 li a {
+  display: inline-block;
+  margin: 0px 20px 0px 20px;
+}
+
+.icon-bottom02 li a {
+  display: inline-block;
+  margin: 0px 20px 0px 20px;
+}
+
+.icon-bottom03 li a {
+  display: inline-block;
+  margin: 0px 20px 0px 20px;
+}
+
+
+.icon-top01 li img {
+  width: 80px;
+  transition: 0.5s;
+}
+
+.icon-top02 li img {
+  width: 80px;
+  transition: 0.5s;
+}
+
+.icon-top03 li img {
+  width: 80px;
+  transition: 0.5s;
+}
+
+.icon-bottom01 li img {
+  width: 80px;
+  transition: 0.5s;
+}
+
+.icon-bottom02 li img {
+  width: 80px;
+  transition: 0.5s;
+}
+
+.icon-bottom03 li img {
+  width: 80px;
+  transition: 0.5s;
+}
+
+.icon-top01 li img:hover {
+  width: 110px;
+}
+
+.icon-top02 li img:hover {
+  width: 110px;
+}
+
+.icon-top03 li img:hover {
+  width: 110px;
+}
+
+.icon-bottom01 li img:hover {
+  width: 110px;
+}
+
+.icon-bottom02 li img:hover {
+  width: 110px;
+}
+
+.icon-bottom03 li img:hover {
+  width: 110px;
+}
+
+.javacomment {
+  display: none;                        /* 要素を非表示 */
+  position: absolute;                   /* 親要素を基準 */
+  padding: 2px;                         /* テキストの前後の余白 */
+  background-color: rgba(66, 61, 61, 0.7); /* 背景色（透明度） */
+  color: white;
+  width:350px;                          /* 吹き出し全体の幅 */
+  left : 130%;                           /* 表示位置 */
+  top : 0;                           /* 表示位置 */
+  margin-top : 12px;                    /* 表示位置 */
+  font-size: 80%;                       /* 文字サイズ */
+  text-align: center;
+  animation: animejava 1s linear;
+}
+.javacomment:after{
+  content: "";                       /* コンテンツの挿入 */
+  position: absolute;                /* 親要素を基準 */
+}
+
+.pythoncomment {
+  display: none;                        /* 要素を非表示 */
+  position: absolute;                   /* 親要素を基準 */
+  padding: 2px;                         /* テキストの前後の余白 */
+  background-color: rgba(66, 61, 61, 0.7);  /* 背景色（透明度） */
+  color: white;
+  width:350px;                          /* 吹き出し全体の幅 */
+  left: 130%;                           /* 表示位置 */
+  top: 0;                           /* 表示位置 */
+  margin-top: 12px;                    /* 表示位置 */
+  font-size: 80%;                       /* 文字サイズ */
+  text-align: center;
+  animation: animepython 1s linear;
+}
+.pythoncomment:after{
+  content: "";                       /* コンテンツの挿入 */
+  position: absolute;                /* 親要素を基準 */
+}
+
+.sqlcomment {
+  display: none;                        /* 要素を非表示 */
+  position: absolute;                   /* 親要素を基準 */
+  padding: 2px;                         /* テキストの前後の余白 */
+  background-color: rgba(66, 61, 61, 0.7);  /* 背景色（透明度） */
+  color: white;
+  width:350px;                          /* 吹き出し全体の幅 */
+  left : 130%;                           /* 表示位置 */
+  top : 0;                           /* 表示位置 */
+  margin-top : 12px;                    /* 表示位置 */
+  font-size: 80%;                       /* 文字サイズ */
+  text-align: center;
+  animation: animesql 1s linear;
+}
+.sqlcomment:after{
+  content: "";                       /* コンテンツの挿入 */
+  position: absolute;                /* 親要素を基準 */
+}
+
+.htmlcomment {
+  display: none;                        /* 要素を非表示 */
+  position: absolute;                   /* 親要素を基準 */
+  padding: 2px;                         /* テキストの前後の余白 */
+  background-color: rgba(66, 61, 61, 0.7);  /* 背景色（透明度） */
+  color: white;
+  width:350px;                          /* 吹き出し全体の幅 */
+  left: 130%;                           /* 表示位置 */
+  top : -25vh;                           /* 表示位置 */
+  margin-top : 12px;                    /* 表示位置 */
+  font-size: 80%;                       /* 文字サイズ */
+  text-align: center;
+  animation: animehtml 1s linear;
+}
+.htmlcomment:after{
+  content: "";                       /* コンテンツの挿入 */
+  position: absolute;                /* 親要素を基準 */
+}
+
+.csscomment {
+  display: none;                        /* 要素を非表示 */
+  position: absolute;                   /* 親要素を基準 */
+  padding: 2px;                         /* テキストの前後の余白 */
+  background-color: rgba(66, 61, 61, 0.7);  /* 背景色（透明度） */
+  color: white;
+  width:350px;                          /* 吹き出し全体の幅 */
+  left: 130%;                           /* 表示位置 */
+  top: -25vh;                           /* 表示位置 */
+  margin-top : 12px;                    /* 表示位置 */
+  font-size: 80%;                       /* 文字サイズ */
+  text-align: center;
+  animation: animecss 1s linear;
+}
+.csscomment:after{
+  content: "";                       /* コンテンツの挿入 */
+  position: absolute;                /* 親要素を基準 */
+}
+
+.javascriptcomment {
+  display: none;                        /* 要素を非表示 */
+  position: absolute;                   /* 親要素を基準 */
+  padding: 2px;                         /* テキストの前後の余白 */
+  background-color: rgba(66, 61, 61, 0.7);  /* 背景色（透明度） */
+  color: white;
+  width: 350px;                          /* 吹き出し全体の幅 */
+  left: 130%;                           /* 表示位置 */
+  top: -25vh;                           /* 表示位置 */
+  margin-top : 12px;                    /* 表示位置 */
+  font-size: 80%;                       /* 文字サイズ */
+  text-align: center;
+  animation: animejavascript 1s linear;
+}
+.javascriptcomment:after{
+  content: "";                       /* コンテンツの挿入 */
+  position: absolute;                /* 親要素を基準 */
+}
+
+@keyframes animejava{
+  0%{ color : white; background:white   }
+  50%{ color : black; background:rgb(255, 255, 255) }
+  100%{ color : white; background:rgba(66, 61, 61, 0.7)}
+}
+
+@keyframes animepython{
+  0%{ color : white; background:white   }
+  50%{ color : black; background:rgb(255, 255, 255) }
+  100%{ color : white; background:rgba(66, 61, 61, 0.7)}
+}
+
+@keyframes animesql{
+  0%{ color : white; background:white   }
+  50%{ color : black; background:rgb(255, 255, 255) }
+  100%{ color : white; background:rgba(66, 61, 61, 0.7)}
+}
+
+@keyframes animehtml{
+  0%{ color : white; background:white   }
+  50%{ color : black; background:rgb(255, 255, 255) }
+  100%{ color : white; background:rgba(66, 61, 61, 0.7)}
+}
+ 
+@keyframes animecss{
+  0%{ color : white; background:white   }
+  50%{ color : black; background:rgb(255, 255, 255) }
+  100%{ color : white; background:rgba(66, 61, 61, 0.7)}
+}
+ 
+@keyframes animejavascript{
+  0%{ color : white; background:white   }
+  50%{ color : black; background:rgb(255, 255, 255) }
+  100%{ color : white; background:rgba(66, 61, 61, 0.7)}
+}
+
+@media screen and (max-width: 670px) {
+
+.nav-links{
+  text-align: center;
+  }
+  
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+  
+.learning-comment{
+  position: absolute;
+  text-align: center;
+  top: 10px;
+  left: 15%;
+  font-size: 20px;
+}
+
+.container .icon-top{
+  top: 45vh;
+  left: 30px;
+}
+
+.container .icon-bottom{
+  top: 65vh;
+  left: 30px;
+}
+
+.icon-top01 li img, .icon-top02 li img,  .icon-top03 li img, .icon-bottom01 li img, .icon-bottom02 li img.icon-bottom02 li img, .icon-bottom03 li img{
+  width: 70px;
+}
+
+.javacomment ,.pythoncomment, .sqlcomment{
+  width:300px;                          /* 吹き出し全体の幅 */
+  left: 8%;                           /* 表示位置 */
+  top: -180px;                           /* 表示位置 */
+}
+
+.htmlcomment ,.csscomment, .javascriptcomment{
+  width:300px;                          /* 吹き出し全体の幅 */
+  left: 8%;                           /* 表示位置 */
+  top: -280px;                           /* 表示位置 */
+}
+
+}
+  
+  
+  
+  .career-subcomment{
+    width: 70%;
+    margin: 10px 50px 10px 50px;
+  }
+  
+  .career-comment p{
+    font-size: 15px;
+    padding:15px 35px;
+  }
+  
+  }
